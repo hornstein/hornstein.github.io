@@ -90,6 +90,8 @@ jQuery(document).ready(function($) {
     });
     if (ferror) return false;
     else var str = $(this).serialize();
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({'event': 'contact_us_submitted'});
     var action = $(this).attr('action');
     if( ! action ) {
       action = 'contactform/contactform.php';
